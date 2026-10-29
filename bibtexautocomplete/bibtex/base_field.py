@@ -324,7 +324,7 @@ class ListField(BibtexField[List[T]]):
             if max_elt is not None:
                 common += 1
                 common_scores += max_score
-                set_b.remove(max_elt)
+                set_b.discard(max_elt)
         return cls.compute_score(a, b, common_scores, common)
 
     @classmethod
